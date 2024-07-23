@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 print ("mu1:"),
 mu1 = input()
-print "mu2:",
+print ("mu2:"),
 mu2 = input()
 
 epsilon = 0.01
@@ -82,7 +82,7 @@ for it in range(N):
         regret[t][it] = total_best_reward - (total_reward * 1.0)
         iterations[t] = t
         if t%9999  == 0:
-            print regret[t][it], iterations[t], "mu1_cur", mu1_cur, "mu2_cur", mu2_cur, num_op_arms[t][it], num_op_arms[t][it] / (t+1)
+            print (regret[t][it], iterations[t], "mu1_cur", mu1_cur, "mu2_cur", mu2_cur, num_op_arms[t][it], num_op_arms[t][it] / (t+1))
 
 
 
@@ -96,7 +96,7 @@ for i in range(total_time):
     if i%100 != 0:
         std_regret[i] = 0
     if i % 1000 == 0:
-        print avg_regret[i], i, regret[i]
+        print (avg_regret[i], i, regret[i])
 
 
 avg_op_arms = [0] * total_time
@@ -107,7 +107,7 @@ for i in range(total_time):
     if i%100 != 0:
         std_op_arms[i] = 0
     if i % 1000 == 0:
-        print avg_op_arms[i], i
+        print (avg_op_arms[i], i)
 
 plt.errorbar(iterations, avg_regret, yerr=std_regret, label='Epsilon= 0.01')
 plt.xlabel('Iterations')
