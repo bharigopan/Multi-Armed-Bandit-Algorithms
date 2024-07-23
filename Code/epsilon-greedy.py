@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-print "mu1:",
+print ("mu1:"),
 mu1 = input()
 print "mu2:",
 mu2 = input()
@@ -12,7 +12,7 @@ epsilon = 0.01
 total_time = 10000
 N = 100
 
-print mu1, mu2
+print (mu1, mu2)
 
 
 def sample_from_distribution(mu):
